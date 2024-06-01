@@ -76,7 +76,3 @@ class Enigma:
         print(f'Original message: {message}')
         print(f'Encrypted message: {encrypted_message}')
         return encrypted_message
-
-
-enigma = Enigma()
-result = enigma.encrypt_message('JAKEP')
