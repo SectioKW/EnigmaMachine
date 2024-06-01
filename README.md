@@ -40,6 +40,8 @@ To run the Enigma Machine, run the following command:
 ```python main.py```
 
 To change the key setting, modify the `keySetting.json` file.
+
+This is the default key setting based on the Enigma Machine I:
 ```
 {
   "plugboard" : {
