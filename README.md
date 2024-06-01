@@ -76,7 +76,7 @@ To change the key setting, modify the `keySetting.json` file.
   },
   "reflector" : "A",
   "rotorOrder" : ["I", "II", "III"],
-  "ringSettings" : ["A","B","A"],
+  "ringSettings" : ["A","A","A"],
   "initialPositions" : ["A", "A", "A"]
 }
 ```
