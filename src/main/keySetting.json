@@ -31,8 +31,8 @@
     "B" : "YRUHQSLDPXNGOKMIEBFZCWVJAT",
     "C" : "FVPJIAOYEDRZXWGCTKUQSBNMHL"
   },
-  "reflector" : "B",
-  "rotorOrder" : ["I", "II", "V"],
-  "ringSettings" : ["A","B","C"],
-  "initialPositions" : ["D", "O", "G"]
+  "reflector" : "A",
+  "rotorOrder" : ["I", "II", "III"],
+  "ringSettings" : ["A","B","A"],
+  "initialPositions" : ["A", "A", "A"]
 }
