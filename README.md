@@ -40,8 +40,10 @@ pip install -r requirements.txt
 
 
 ## Usage
-To run the Enigma Machine, run the following command:
-```python main.py```
+To run the Enigma Machine visual mode:
+```bash
+python enigmavisual.py
+```
 
 To change the key setting, modify the `keySetting.json` file.
 
