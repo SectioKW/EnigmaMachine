@@ -72,7 +72,25 @@ class Enigma:
     def encrypt_message(self, message: str) -> str:
         encrypted_message = ''
         for letter in message:
-            encrypted_message += self.encrypt_signal(letter)
+            if letter == ' ':
+                encrypted_message += ' '
+            else: encrypted_message += self.encrypt_signal(letter)
         print(f'Original message: {message}')
         print(f'Encrypted message: {encrypted_message}')
         return encrypted_message
+
+    def decrypt_signal(self, letter: str) -> str:
+        signal = self.kb.forward(letter)
+        signal = self.pb.forward(signal)
+        for ro in self.rotors:
+            signal = ro.forward(signal)
+        signal = self.reflector.reflect(signal)
+        for ro in reversed(self.rotors):
+            signal = ro.backward(signal)
+        signal = self.pb.backward(signal)
+        letter = self.kb.backward(signal)
+        return letter
+
+
+
+
