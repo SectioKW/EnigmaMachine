@@ -15,7 +15,7 @@ structure:
 - `reflector.py`: The implementation of the reflector used in the Enigma Machine.
 - `KeyReader.py`: KeyReader class to read the key from keySetting.json
 - `keySetting.json`: The key setting file for the Enigma Machine.
-- `visual.py`: The visual implementation of the Enigma Machine.
+- `visual.py`: The visual implementation of the Enigma Machine using pygame.
 - `enigmavisual.py`: The Enigma machine with visual wrapper.
 
 Key Setting:
