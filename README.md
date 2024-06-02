@@ -1,5 +1,5 @@
 # Enigma Machine
-Python approach to implement the Enigma Machine.
+Python approach to implement the Enigma Machine. With the visual implementation of the Enigma Machine.
 
 The rotor wiring and notch setting are based on the Enigma Machine I.
 according to the following link: https://en.wikipedia.org/wiki/Enigma_rotor_details
@@ -12,6 +12,8 @@ structure:
 - `reflector.py`: The implementation of the reflector used in the Enigma Machine.
 - `KeyReader.py`: KeyReader class to read the key from keySetting.json
 - `keySetting.json`: The key setting file for the Enigma Machine.
+- `visual.py`: The visual implementation of the Enigma Machine.
+- `enigmavisual.py`: The Enigma machine with visual wrapper.
 
 Key Setting:
 - `plugboard`: The plugboard setting for the Enigma Machine. (e.g. {"A": "B", "C": "D"})
