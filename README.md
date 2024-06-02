@@ -1,6 +1,9 @@
 # Enigma Machine
 Python approach to implement the Enigma Machine. With the visual implementation of the Enigma Machine.
 
+To get the Enigma Machine without the visual implementation, please refer to the main branch, or use the following link:
+https://github.com/SectioKW/EnigmaMachine/tree/main
+
 The rotor wiring and notch setting are based on the Enigma Machine I.
 according to the following link: https://en.wikipedia.org/wiki/Enigma_rotor_details
 
