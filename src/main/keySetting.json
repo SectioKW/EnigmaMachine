@@ -34,5 +34,5 @@
   "reflector" : "A",
   "rotorOrder" : ["I", "II", "III"],
   "ringSettings" : ["A","A","A"],
-  "initialPositions" : ["A", "A", "A"]
+  "initialPositions" : ["A","A","A"]
 }

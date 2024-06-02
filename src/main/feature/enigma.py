@@ -12,6 +12,14 @@ class Enigma:
         self.set_ring_setting()
         self.set_rotor_start()
         self.reflector = self.load_reflector()
+        self.history = []
+
+    def reset(self):
+        self.pb.load()
+        for ro in self.rotors:
+            ro.load()
+        self.reflector.load()
+        self.history = []
 
     def load_plugboard(self) -> object:
         return plugboard.Plugboard(self.Key.get_plugboard())
@@ -37,6 +45,16 @@ class Enigma:
         for i, ro in enumerate(self.rotors):
             ro.set_ring(setting[i])
 
+    def rotate_backward(self):
+        if len(self.history) == 0:
+            return
+        last = self.history.pop()
+        if type(last) == list:
+            for ro in last:
+                ro.rotate(1, False)
+        else:
+            last.rotate(1, False)
+
     def rotate_rotors(self):
         r3 = self.rotors[2]
         r2 = self.rotors[1]
@@ -45,16 +63,20 @@ class Enigma:
             r3.rotate()
             r2.rotate()
             r1.rotate()
+            self.history.append([r1, r2, r3])
         # Double step
         elif r2.notch == r2.left[0]:
             r3.rotate()
             r2.rotate()
             r1.rotate()
+            self.history.append([r1, r2, r3])
         elif r3.notch == r3.left[0]:
             r3.rotate()
             r2.rotate()
+            self.history.append([r2, r3])
         else:
             r3.rotate()
+            self.history.append(r3)
 
     def encrypt_signal(self, letter: str) -> str:
         self.rotate_rotors()
