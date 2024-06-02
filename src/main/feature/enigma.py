@@ -69,28 +69,22 @@ class Enigma:
         letter = self.kb.backward(signal)
         return letter
 
+    def display_rotors(self):
+        print(self.rotors[2].left)
+        print(self.rotors[2].right)
+        # for i, ro in enumerate(self.rotors):
+        #     print(f'Rotor {i+1}')
+        #     ro.display()
+        print(f'-==============-')
+
     def encrypt_message(self, message: str) -> str:
+        print(f'Encrypting message')
         encrypted_message = ''
         for letter in message:
-            if letter == ' ':
+            if letter.isalpha():
+                encrypted_message += self.encrypt_signal(letter)
+            else:
                 encrypted_message += ' '
-            else: encrypted_message += self.encrypt_signal(letter)
         print(f'Original message: {message}')
         print(f'Encrypted message: {encrypted_message}')
         return encrypted_message
-
-    def decrypt_signal(self, letter: str) -> str:
-        signal = self.kb.forward(letter)
-        signal = self.pb.forward(signal)
-        for ro in self.rotors:
-            signal = ro.forward(signal)
-        signal = self.reflector.reflect(signal)
-        for ro in reversed(self.rotors):
-            signal = ro.backward(signal)
-        signal = self.pb.backward(signal)
-        letter = self.kb.backward(signal)
-        return letter
-
-
-
-

@@ -27,3 +27,8 @@ class Rotor(Component):
         n = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.find(letter.upper())
         self.rotate(n)
 
+    def display(self):
+        print(f'Right : {self.right}')
+        print(f'Left : {self.left}')
+        print()
+
