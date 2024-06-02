@@ -1,5 +1,9 @@
 # Enigma Machine
 Python approach to implement the Enigma Machine.
+
+The rotor wiring and notch setting are based on the Enigma Machine I.
+according to the following link: https://en.wikipedia.org/wiki/Enigma_rotor_details
+
 structure:
 - `enigma.py`: The main implementation of the Enigma Machine.
 - `rotors.py`: The implementation of the rotors used in the Enigma Machine.
